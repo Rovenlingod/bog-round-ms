@@ -3,11 +3,8 @@ package com.example.bogroundms.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Objects;
 import java.util.UUID;
 
 @Entity
