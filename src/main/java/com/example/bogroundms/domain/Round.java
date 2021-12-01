@@ -27,9 +27,6 @@ public class Round {
     @Column(name = "round_type")
     private RoundType roundType;
 
-    @Column(name = "workout_id")
-    private UUID workoutId;
-
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "round", cascade = CascadeType.ALL)
     private List<RoundExercise> roundExercises;
 }
