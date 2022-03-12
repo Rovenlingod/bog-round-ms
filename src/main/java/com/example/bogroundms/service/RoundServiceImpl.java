@@ -27,8 +27,7 @@ public class RoundServiceImpl implements RoundService {
     @Override
     public UUID createRound(RoundCreationRequest roundCreationRequest) {
         Round newRound = roundMapper.toEntity(roundCreationRequest);
-        for (RoundExercise e :
-                newRound.getRoundExercises()) {
+        for (RoundExercise e : newRound.getRoundExercises()) {
             e.setRound(newRound);
         }
         return roundRepository.save(newRound).getId();
