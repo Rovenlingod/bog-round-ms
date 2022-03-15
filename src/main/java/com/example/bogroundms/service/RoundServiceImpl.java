@@ -37,7 +37,7 @@ public class RoundServiceImpl implements RoundService {
     public List<RoundDTO> getRoundsByIds(List<String> ids) {
         List<Round> rounds = roundRepository
                 .findAllByIdIn(ids.stream().map(UUID::fromString).collect(Collectors.toList()));
-        if (rounds.isEmpty()) throw new RoundException("Exercises from provided list are non-existent or are not for public use");
+        if (rounds.isEmpty()) throw new RoundException("Rounds from provided list are non-existent or are not for public use");
         return roundMapper.toDtos(rounds);
     }
 }
