@@ -9,5 +9,6 @@ public interface LoginServiceFeign {
 
     @GetMapping("/api/validateToken")
     String validateToken(@RequestParam(name = "token") String token);
+
 }
 
